@@ -9,7 +9,11 @@ const Login = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    window.location.href = "/"; // Redirect to login page
+  };
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
