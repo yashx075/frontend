@@ -17,7 +17,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://127.0.0.1:8000/auth/login", formData);
+      const response = await axios.post("https://backend-b0do.onrender.com/auth/login", formData);
       localStorage.setItem("token", response.data.access_token);
       alert("Login successful!");
       navigate("/dashboard");
